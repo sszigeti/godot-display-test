@@ -20,7 +20,7 @@ func _on_ItemList_item_selected(index):
 	ProjectSettings.set("size/width", new_size[0])
 	ProjectSettings.set("size/height", new_size[1])
 	
-	# Updating this has some weird effect that produces video glitches on the right&botton, but does not resize the viewport
+	# Updating this has some weird effect that produces video glitches on the right&bottom, but does not resize the viewport
 	get_viewport_rect().size = new_size
 	
 	# Only the application window size changes, but not the resolution
