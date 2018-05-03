@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Display Test"
+run/main_scene="res://main.tscn"
+boot_splash/image="res://PM5644-1920x1080.png"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1000
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.382813, 0.189911, 0.189911, 1 )
+environment/default_environment="res://default_env.tres"
