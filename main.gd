@@ -18,7 +18,8 @@ func _on_ItemList_item_selected(index):
 	
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_VIEWPORT, SceneTree.STRETCH_ASPECT_KEEP, new_size)
 	
-	OS.window_size = new_size
+	if !OS.window_fullscreen:
+		OS.window_size = new_size
 
 
 func _on_RichTextLabel_meta_clicked(meta):
