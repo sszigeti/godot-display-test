@@ -16,14 +16,8 @@ func _on_ItemList_item_selected(index):
 	var requested_resolution = resolutions.get_item_text(index).split_floats(",")
 	var new_size = Vector2(requested_resolution[0], requested_resolution[1])
 	
-	# Updating these doesn't have any effect whatsoever
-	ProjectSettings.set("size/width", new_size[0])
-	ProjectSettings.set("size/height", new_size[1])
+	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_VIEWPORT, SceneTree.STRETCH_ASPECT_KEEP, new_size)
 	
-	# Updating this has some weird effect that produces video glitches on the right&bottom, but does not resize the viewport
-	get_viewport_rect().size = new_size
-	
-	# Only the application window size changes, but not the resolution
 	OS.window_size = new_size
 
 
